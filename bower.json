@@ -21,7 +21,7 @@
   },
   "endpoint": "https://github.com/triarc/cirrus-tlFileUploader.git",
   "dependencies": {
-    "cirrus-utils": "~0.1.0",
+    "cirrus-utils": "~0.2.0",
     "cirrus-tlArray": "~0.0.8"
   }
 }
