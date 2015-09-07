@@ -33,7 +33,7 @@ var Triarc;
 var Triarc;
 (function (Triarc) {
     var FileUploader;
-    (function (_FileUploader) {
+    (function (FileUploader_1) {
         var FileUploaderService = (function () {
             function FileUploaderService(FileUploader, $rootScope) {
                 this.FileUploader = FileUploader;
@@ -48,11 +48,11 @@ var Triarc;
             FileUploaderService.$inject = ['FileUploader', '$rootScope'];
             return FileUploaderService;
         })();
-        _FileUploader.FileUploaderService = FileUploaderService;
-        angular.module("tlFileUploader", ["angularFileUpload"]).service(FileUploaderService.serviceId, FileUploaderService).directive('tlFileSelect', [
-            '$parse',
-            'FileUploader',
-            function ($parse, FileUploader) {
+        FileUploader_1.FileUploaderService = FileUploaderService;
+        angular.module("tlFileUploader", ["angularFileUpload"])
+            .service(FileUploaderService.serviceId, FileUploaderService)
+            .directive('tlFileSelect', [
+            '$parse', 'FileUploader', function ($parse, FileUploader) {
                 return {
                     scope: {
                         tlFileSelect: '='
@@ -74,10 +74,9 @@ var Triarc;
                     }
                 };
             }
-        ]).directive('tlFileDrop', [
-            '$parse',
-            'FileUploader',
-            function ($parse, FileUploader) {
+        ])
+            .directive('tlFileDrop', [
+            '$parse', 'FileUploader', function ($parse, FileUploader) {
                 FileUploader.FileDrop.prototype.events = {
                     $destroy: 'destroy',
                     drop: 'onDrop',
@@ -86,8 +85,7 @@ var Triarc;
                     dragbetterleave: 'onDragLeave'
                 };
                 // needed, else the dragbetter complains
-                FileUploader.FileDrop.prototype.dummy = function () {
-                };
+                FileUploader.FileDrop.prototype.dummy = function () { };
                 FileUploader.FileDrop.prototype.onDragLeave = function (event) {
                     if (event.target !== this.element[0]) {
                         return;
@@ -119,9 +117,9 @@ var Triarc;
                     }
                 };
             }
-        ]).directive('tlFileOver', [
-            'FileUploader',
-            function (FileUploader) {
+        ])
+            .directive('tlFileOver', [
+            'FileUploader', function (FileUploader) {
                 return {
                     scope: {
                         tlFileOver: '='

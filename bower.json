@@ -1,9 +1,6 @@
 {
   "name": "cirrus-tlFileUploader",
-  "version": "0.0.6",
-  "authors": [
-    "Marco Bachmann <mb@triarc-labs.com>"
-  ],
+  "version": "0.0.7",
   "main": "tlFileUploader.js",
   "moduleType": [
     "globals"
@@ -21,7 +18,7 @@
   },
   "endpoint": "https://github.com/triarc/cirrus-tlFileUploader.git",
   "dependencies": {
-    "cirrus-utils": "~0.2.0",
-    "cirrus-tlArray": "~0.0.8"
+    "cirrus-utils": "^0.4.1",
+    "cirrus-tlArray": "^0.8.0"
   }
 }
