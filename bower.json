@@ -1,6 +1,6 @@
 {
   "name": "cirrus-tlFileUploader",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "tlFileUploader.js",
   "moduleType": [
     "globals"
@@ -19,6 +19,6 @@
   "endpoint": "https://github.com/triarc/cirrus-tlFileUploader.git",
   "dependencies": {
     "cirrus-utils": "^0.4.1",
-    "cirrus-tlArray": "^0.8.0"
+    "cirrus-tlArray": "^0.0.8"
   }
 }
