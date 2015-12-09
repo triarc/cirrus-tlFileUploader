@@ -1,7 +1,9 @@
 {
   "name": "cirrus-tlFileUploader",
   "version": "0.0.8",
-  "main": "tlFileUploader.js",
+  "main": [
+    "tlFileUploader.js"
+  ],
   "moduleType": [
     "globals"
   ],

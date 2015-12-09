@@ -3,7 +3,7 @@ declare module Triarc {
         private supportedDocumentTypes;
         uploader: any;
         static $inject: string[];
-        constructor($fileUploader: any, $scope: ng.IScope, supportedDocumentTypes?: string);
+        constructor($fileUploader: any, $scope: angular.IScope, supportedDocumentTypes?: string);
         removeFromQueue(file: File): void;
         cancelAll(): void;
     }
@@ -15,7 +15,7 @@ declare module Triarc.FileUploader {
         static serviceId: string;
         static $inject: string[];
         fileUploader: any;
-        constructor(FileUploader: any, $rootScope: ng.IRootScopeService);
+        constructor(FileUploader: any, $rootScope: angular.IRootScopeService);
         create(): any;
     }
 }
